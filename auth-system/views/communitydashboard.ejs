@@ -1,0 +1,164 @@
+<html>
+<head>
+    <title>Community Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='/scripts/jquery.min.js'></script>
+<script src='/scripts/jquery.miranda.min.js'></script>
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fuxe{font-size:18px;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-nx8p{font-size:18px;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+
+
+body {
+font-family: Arial;
+}
+
+* {
+box-sizing: border-box;
+}
+
+form.example input[type=text] {
+padding: 10px;
+font-size: 17px;
+border: 1px solid grey;
+float: left;
+width: 80%;
+background: #f1f1f1;
+}
+
+form.example button {
+float: left;
+width: 20%;
+padding: 10px;
+background: #2196F3;
+color: white;
+font-size: 17px;
+border: 1px solid grey;
+border-left: none;
+cursor: pointer;
+}
+
+form.example button:hover {
+background: #0b7dda;
+}
+
+form.example::after {
+content: "";
+clear: both;
+display: table;
+}
+
+
+
+</style>
+
+</head>
+<body class="container">
+    <div class="page-header">
+<h1> Vital Systems™ </h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/logout">Log Out</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container row">
+       <h1>Hi, Welcome to The Community Dashboard</h1>
+   <h4>Add patient details below</h4>
+    </div>
+
+    <div class="container row">
+        <div class="jumbotron col-sm-4 pull-center">
+            <form action="/communitydashboard" method="post">                   
+        <div>
+                    <label>First Name:</label>
+                    <input type="text" name="firstname"/>
+                </div>
+        <div>
+                    <label>Last Name:</label>
+                    <input type="text" name="lastname"/>
+                </div>
+		<div>
+                        <label>Gender:</label>
+                        <input type="radio" name="gender" value="male"> Male
+			<input type="radio" name="gender" value="female"> Female <br />
+                    </div>
+        <div>
+                    <label>Patient Age:</label>
+                    <input type="int" name="age"/>
+                </div>
+		<div>
+                        <label>Weight (KGs):</label>
+                        <input type="int" name="weight"/>
+                    </div>
+		 <label>Description:</label>
+                        <input type="description" name="description"/>
+                    </div>
+         <div>
+                    <label>Blood Type:</label>
+                    <input type="text" name="bloodtype"/>
+                </div>
+                <div>
+                    <input class="btn btn-primary" type="submit" value="Add Patient"/>
+                </div>
+            </form>                  
+        </div>          
+    </div>
+<hr />
+    <div class="container row">       
+   <h4>Patient List</h4>
+    </div>
+
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-nx8p"><span style="font-weight:bold">Patient ID</span></th>
+<th class="tg-nx8p"><span style="font-weight:bold">First Name</span></th>
+<th class="tg-nx8p"><span style="font-weight:bold">Last Name</span></th>
+<th class="tg-nx8p"><span style="font-weight:bold">gender</span></th>
+<th class="tg-nx8p"><span style="font-weight:bold">Age</span></th>
+<th class="tg-nx8p"><span style="font-weight:bold">Weight</span></th>
+<th class="tg-nx8p"><span style="font-weight:bold">Description</span></th>
+<th class="tg-nx8p"><span style="font-weight:bold">Blood Group</span></th>
+</tr>
+</thead>
+<tbody id="mydata">
+<tr>
+<td class="tg-0lax">[[uniqueid]]</td>
+<td class="tg-0lax">[[firstname]]</td>
+<td class="tg-0lax">[[lastname]]</td>
+<td class="tg-0lax">[[gender]]</td>
+<td class="tg-0lax">[[age]]</td>
+<td class="tg-0lax">[[weight]]</td>
+<td class="tg-0lax">[[description]]</td>
+<td class="tg-0lax">[[bloodtype]]</td>
+</tr>
+</tbody>
+</table>
+ <br><br>
+<script>
+$("#mydata").mirandajs(<%- comm%>);
+</script>
+
+</body>
+</html>

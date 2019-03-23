@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>Hospital Dashboard</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+<script src='/scripts/jquery.min.js'></script>
+<link rel="stylesheet" type="text/css" href="styles/style3.css">
+<script src='/scripts/jquery.miranda.min.js'></script>
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fuxe{font-size:18px;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-nx8p{font-size:18px;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+
+
+form.example input[type=text] {
+padding: 10px;
+font-size: 17px;
+border: 1px solid grey;
+float: left;
+width: 80%;
+background: #f1f1f1;
+}
+
+form.example button {
+float: left;
+width: 20%;
+padding: 10px;
+background: #2196F3;
+color: white;
+font-size: 17px;
+border: 1px solid grey;
+border-left: none;
+cursor: pointer;
+}
+
+form.example button:hover {
+background: #0b7dda;
+}
+
+form.example::after {
+content: "";
+clear: both;
+display: table;
+}
+</style>
+
+</head>
+
+<body >
+<div class="header">
+<img src="styles/SIH.jpg" 
+data-src-600px="image-600px.jpg"
+data-src-800px="image-800px.jpg"
+alt="Smart India Hackathon">
+<h2> Vital Systems™ </h2>
+    </div>
+
+    <div class="topnav">
+    <a href="/">Home</a>
+    <a href="/logout">Log Out</a>
+       </div>
+
+    <div class="container row">
+       <h1 class="center" style="color:black">Hi, Welcome to The Hospital Dashboard</h1>
+   <h4>Search patient id below</h4>
+    </div>
+<form class="patientSearch" action="/search" method="POST">
+<input type="text" placeholder="Enter your Patient ID here...." name="userid">
+<button type="submit"><i class="fa fa-search"></i> Search</button>
+</form>
+
+<hr />
+    <div class="container row">       
+   <h4>Doctor's Patient List</h4>
+    </div>
+    <table class="tg">
+      <thead>
+      <tr>
+      <th class="tg-nx8p"><span style="font-weight:bold">Patient ID</span></th>
+      <th class="tg-nx8p"><span style="font-weight:bold">First Name</span></th>
+      <th class="tg-nx8p"><span style="font-weight:bold">Last Name</span></th>
+      <th class="tg-nx8p"><span style="font-weight:bold">Age</span></th>
+      <th class="tg-nx8p"><span style="font-weight:bold">Blood Group</span></th>
+      </tr>
+      </thead>
+      <tbody id="mydata">
+      <tr>
+      <td class="tg-0lax">[[uniqueid]]</td>
+      <td class="tg-0lax">[[firstname]]</td>
+      <td class="tg-0lax">[[lastname]]</td>
+      <td class="tg-0lax">[[age]]</td>
+      <td class="tg-0lax">[[bloodtype]]</td>
+      </tr>
+      </tbody>
+      </table>
+
+
+      <script>
+        $("#mydata").mirandajs(<%- comm%>);
+        </script>
+        
+</body>
+</html>

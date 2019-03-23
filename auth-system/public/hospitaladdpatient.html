@@ -1,0 +1,113 @@
+	<html>
+    <head>
+        <title>Hospital Dashboard</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fuxe{font-size:18px;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-nx8p{font-size:18px;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
+    </head>
+    <body class="container">
+        <div class="page-header">
+	<h1> Vital Systems™ </h1>
+        </div>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/logout">Log Out</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="container row">
+	   <h4>Search patient id below</h4>
+        </div>
+<form class="example" action="/action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<hr />
+        <div class="container row">       
+	   <h4>Patient ID Results</h4>
+        </div>
+
+<table class="tg">
+  <tr>
+    <th class="tg-nx8p"><span style="font-weight:bold">Patient ID</span></th>
+    <th class="tg-nx8p"><span style="font-weight:bold">First Name</span></th>
+    <th class="tg-nx8p"><span style="font-weight:bold">Last Name</span></th>
+    <th class="tg-nx8p"><span style="font-weight:bold">Age</span></th>
+    <th class="tg-nx8p"><span style="font-weight:bold">Blood Group</span></th>
+    <th class="tg-nx8p"><span style="font-weight:bold">Operation</span></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">12699</td>
+    <td class="tg-0lax">Aryan</td>
+    <td class="tg-0lax">Sharma</td>
+    <td class="tg-0lax">47</td>
+    <td class="tg-0lax">O-</td>
+    <td class="tg-0lax"><button class="editbtn">Add</button></td>
+  </tr>
+</table>
+
+    </body>
+</html>

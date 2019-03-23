@@ -1,0 +1,143 @@
+body{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    background-color: #e3e6e9;
+   
+  }
+  .header{
+    margin: 0px;
+    background-color: rgb(60, 187, 145);
+    padding-top: 1px ;
+    padding-bottom: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(231, 224, 224);
+  }
+  h1{
+    margin-left: 10px;
+    color: white;
+  }
+  .topnav{
+    overflow: hidden;
+    background-color: #333;
+    padding: 4px;
+}
+.topnav a{
+    float: left;
+    display: block;
+    color: #fff; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 9px;
+ }
+  img{
+    width: 100px;
+    float: right;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  form{
+    width: 330px;
+    height: 500px;
+    background: #f1f5f1;
+    
+    color: rgb(10, 10, 10);
+    top: 75%;
+    left: 50%;
+    position: absolute;
+    
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 35px 30px;
+  }
+  h2{
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+  }
+  input[type="text"]{
+   width: 250px;
+   padding: 5px;
+   border: none;
+   border-radius: 3px;
+   color: rgb(7, 7, 7);
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 14px;
+   
+  }
+  input[type="number"]{
+    width: 190px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(7, 7, 7);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  input[type="email"]{
+    width: 250px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(7, 7, 7);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  input[type="password"]{
+    width: 250px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(7, 7, 7);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  #ph{
+    width: 60px;
+    padding: 3.5px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(7, 7, 7);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px; 
+  }
+  input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(60, 187, 145);
+    color: rgb(247, 243, 243);
+    font-size: 15px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+    cursor: pointer;
+    width: 80%;
+  }
+  input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ffffff;
+    color: #000;
+  }
+  label{
+    font-weight: bold;
+    font-size: 15px;
+  font-style: normal;
+  }
+  /* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+  #primary { width:67%; }
+  #secondary { width:30%; margin-left:3%;}  
+}
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+  #primary { width:100%; }
+  #secondary { width:100%; margin:0; border:none; }
+}
